@@ -1,0 +1,155 @@
+html {
+  font: 10px Arial, Helvetic, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+html {
+  background: #d1fff1;
+  height: 100%;
+}
+
+#root .endMsg {
+  color: #2e8b72;
+  flex: 0 0 100%;
+  font-size: 4rem;
+  font-weight: bold;
+  height: 4rem;
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+#gameBoard {
+  background: #fff;
+  border: 1px solid #666;
+  border-radius: 1em;
+  margin: 4rem auto 0;
+  padding: 1rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90rem;
+}
+
+.control-panel {
+  float: left;
+}
+
+.control-panel__pointer {
+  cursor: pointer;
+}
+
+.score {
+  background: #2e8b72;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  height: 10rem;
+  width: 25rem;
+  text-align: center;
+  line-height: 10rem;
+  margin-top: 37px;
+}
+
+.score span {
+  font-size: 4.5em;
+}
+
+.flip {
+  border: 1px solid #666;
+  border-radius: 0.5px;
+  margin: 1rem;
+  width: 20rem;
+  height: 25rem;
+  perspective: 800;
+  -webkit-perspective: 800;
+  position: relative;
+  box-shadow: 2px 2px 2px 1px #666;
+}
+
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.flip .card.flipped {
+  -webkit-transform: rotatex(-180deg);
+  transform: rotatex(-180deg);
+}
+
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position-y: 2em;
+  background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-size: contain;
+}
+
+.flip .card .front {
+  -webkit-transform: rotatex(-180deg);
+  position: absolute;
+  z-index: 1;
+}
+
+.flip .card .back {
+  cursor: pointer;
+  background-image: url('/png/Adeline/300');
+}
+
+/*  Putting the card fronts above the card back will hide the front of the card until class is removed */
+.flip .square-0 {
+  background-color: aqua;
+}
+
+.flip .square-1 {
+  background-color: bisque;
+}
+
+.flip .square-2 {
+  background-color: blue;
+}
+
+.flip .square-3 {
+  background-color: blueviolet;
+}
+
+.flip .square-4 {
+  background-color: brown;
+}
+
+.flip .square-5 {
+  background-color: cadetblue;
+}
+
+.flip .square-6 {
+  background-color: chartreuse;
+}
+
+.flip .square-7 {
+  background-color: chocolate;
+}
+
+.flip .square-8 {
+  background-color: coral;
+}
+
+.flip .square-9 {
+  background-color: cornflowerblue;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
